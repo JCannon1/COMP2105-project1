@@ -1,0 +1,83 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+/* Made the switch size so it would fit the slider in it */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 100px;
+    color: black;
+}
+/* Hide default HTML checkbox */
+.switch input {
+    display:none;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Made the background colour red for when the switch is off */
+    background-color: red;
+    transition: .5s;
+    /* Added rounded corners */
+    border-radius: 10px;
+    /* Added a box-shadow for visual effect and 3D depth */
+    box-shadow: inset 0 0 40px darkgrey;
+    /* Added a lightgrey border */
+    border: solid 2px lightgrey;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 150px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    border-radius: 10px;
+    /* Added a box shadow to match the switch */
+    box-shadow: inset 0 0 20px darkgrey;
+    transition: .5s;
+}
+input:checked + .slider {
+    background-color: green;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px green;
+}
+input:checked + .slider:before {
+    transform: translateX(200px);
+}
+/* Made the on/ off text white */
+h2 {
+    color: white;
+    /* Made the text size larger and added some opacity */
+    font-size: 40px;
+    opacity: 0.5;
+}
+.off {
+    position: relative;
+    left: 210px;
+    bottom: 85px;
+}
+.on {
+    position: relative;
+    right: -40px;
+    bottom: 8px;
+}
+/* Positioning the lightswitch image beside the switch and slider */
+img {
+    position: relative;
+    left: 400px;
+    top: 0px;
+}
+/* Added a JQuery hover action when the user hovers over the lightswitch image */
+.hover {
+    background: white;
+  }
